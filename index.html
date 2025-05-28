@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมเรียนรู้การประกอบพิธีฮัจญ์</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <h1>เกมเรียนรู้: การประกอบพิธีฮัจญ์</h1>
+            <div class="input-group">
+                <label for="playerName">ชื่อ-สกุล:</label>
+                <input type="text" id="playerName" placeholder="กรอกชื่อ-สกุล">
+            </div>
+            <div class="input-group">
+                <label for="levelSelect">เลือกระดับ:</label>
+                <select id="levelSelect">
+                    <option value="ประถม">ประถมศึกษา</option>
+                    <option value="มัธยมต้น">มัธยมศึกษาตอนต้น</option>
+                    <option value="มัธยมปลาย">มัธยมศึกษาตอนปลาย</option>
+                </select>
+            </div>
+            <button id="startButton">เริ่มเกม</button>
+            <p class="credit">สร้างโดย KruFadil</p>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div class="quiz-header">
+                <div id="level-display">ระดับ: </div>
+                <div id="timer">เวลา: 00:00</div>
+                <div id="score-display">คะแนน: 0</div>
+            </div>
+            <div id="question-container">
+                <p id="question-text"></p>
+            </div>
+            <div id="options-container">
+                <!-- Options will be dynamically added here -->
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <button id="nextButton" class="hidden">คำถามถัดไป</button>
+        </div>
+
+        <div id="end-screen" class="hidden">
+            <h2>สรุปผลคะแนน</h2>
+            <p id="finalPlayerName"></p>
+            <p id="finalLevel"></p>
+            <p id="finalTime"></p>
+            <p id="finalScore"></p>
+            <p id="saving-status">กำลังบันทึกคะแนน...</p>
+            <button id="playAgainButton">เล่นอีกครั้ง</button>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

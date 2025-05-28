@@ -1,0 +1,194 @@
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #F0E8D8; /* สีพื้นหลังคล้ายทราย */
+    background-image: url('https://www.islamic-relief.org.uk/wp-content/uploads/2022/11/Qabah.jpg'); /* Placeholder - เปลี่ยนเป็นภาพของคุณ */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* พื้นหลังโปร่งแสงเล็กน้อย */
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    border: 2px solid #B8860B; /* สีทองเข้ม */
+}
+
+h1, h2 {
+    color: #006400; /* สีเขียวเข้ม */
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1em;
+}
+
+button {
+    background-color: #006400; /* สีเขียวเข้ม */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: bold;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #004d00; /* สีเขียวเข้มขึ้น */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B8860B;
+    font-size: 0.9em;
+}
+
+#question-container {
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+#question-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#options-container button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#options-container button:hover {
+    background-color: #e0e0e0;
+}
+
+#options-container button.correct {
+    background-color: #90EE90 !important; /* Light green */
+    color: black !important;
+    border-color: #2E7D32 !important;
+}
+
+#options-container button.incorrect {
+    background-color: #FFCCCB !important; /* Light red */
+    color: black !important;
+    border-color: #C62828 !important;
+}
+
+#options-container button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.feedback.correct {
+    background-color: #e6ffed;
+    color: #006400;
+    border: 1px solid #006400;
+}
+
+.feedback.incorrect {
+    background-color: #ffe6e6;
+    color: #D22B2B;
+    border: 1px solid #D22B2B;
+}
+
+#end-screen p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#finalScore {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #006400;
+}
+
+.credit {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .quiz-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .quiz-header div {
+        margin-bottom: 5px;
+    }
+    #question-text {
+        font-size: 1.1em;
+    }
+    #options-container button {
+        font-size: 0.9em;
+    }
+}
